@@ -28,7 +28,7 @@ app.use(cors(
 ));
 app.use(limiter)
 //app.use(mongoSanitize());
-app.use(xssClean());
+// app.use(xssClean());
 app.use(cookieParser());
 app.use(csurf({ cookie: true }));
 app.use('/uploads', express.static('uploads'));
