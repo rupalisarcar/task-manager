@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
-const mongoSanitize = require('express-mongo-sanitize');
-const xssClean = require('xss-clean');
+// const mongoSanitize = require('express-mongo-sanitize');
+// const xssClean = require('xss-clean');
 const csurf = require('csurf');
 const cookieParser = require('cookie-parser');
 require('dotenv').config();
@@ -27,7 +27,7 @@ app.use(cors(
   }
 ));
 app.use(limiter)
-app.use(mongoSanitize());
+//app.use(mongoSanitize());
 app.use(xssClean());
 app.use(cookieParser());
 app.use(csurf({ cookie: true }));
